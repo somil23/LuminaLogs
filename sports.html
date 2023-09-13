@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VoxNebula</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">VoxNebula</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Blogs
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/technology.html"
+                    >Technology</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="/carrer.html">Carrer</a></li>
+                <li><a class="dropdown-item" href="/sports.html">Sports</a></li>
+                <li>
+                  <a class="dropdown-item" href="/education.html">Education</a>
+                </li>
+                <li><a class="dropdown-item" href="/health.html">Health</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/contact.html">Support</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">Write for us</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#signUpModal"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Login to VoxNebula
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Remember Me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      aria-labelledby="sigUpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signUpModalLabel">
+              Register with us
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cexampleInputPassword1"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/abigail-keenan-8-s5QuUBtyM-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Over in the world of soccer, fans were treated to a
+                  mesmerizing display of skill by one of the sport's rising
+                  stars. In a high-stakes match, the young forward netted a
+                  stunning hat-trick, showcasing incredible ball control and
+                  precision shots. This performance not only secured a crucial
+                  victory for the team but also solidified the player's status
+                  as a force to be reckoned with in the soccer world.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">10 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/braden-collum-ttbCwN_mWic-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Beyond the excitement of games, the sports world is abuzz with
+                  transfer rumors and negotiations. As the transfer season kicks
+                  into high gear, speculations about star players switching
+                  teams are circulating like wildfire. Fans eagerly await
+                  official announcements that could potentially reshape the
+                  landscape of their favorite sports.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">7 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/brandon-mowinkel-3_JwPJwq6CI-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Looking ahead, mark your calendars for a series of upcoming
+                  tournaments that promise exhilarating action. From the
+                  international tennis championship to the annual golf major,
+                  the next few months are packed with opportunities to witness
+                  elite athletes showcasing their skills on the grand stage.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">15 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/courtney-cook-SsIIw_MET0E-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  As the world eagerly awaits the annual Masters Tournament, the
+                  air is thick with anticipation. This prestigious golf event
+                  brings together the best of the best on a course renowned for
+                  its beauty and difficulty. The iconic green jacket awaits its
+                  new owner, while fans around the globe hold their breath in
+                  the hopes of witnessing historic shots and unforgettable
+                  moments.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">5 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/j-schiemann-Z4Sxy1_3wdY-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  The tennis calendar is punctuated by four major tournaments
+                  known as the Grand Slam events. From the sun-soaked courts of
+                  the Australian Open to the historic clay courts of Roland
+                  Garros, these tournaments bring together the best in the sport
+                  to battle for supremacy. Get ready to follow the twists and
+                  turns of this year's Grand Slam journey.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">10 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/jacek-dylag-fZglO1JkwoM-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Dive into the world of professional cycling's Grand Tours: the
+                  Tour de France, Giro d'Italia, and Vuelta a España. Discuss
+                  their rich histories, challenging routes, and the legends who
+                  have left an indelible mark on these races..
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">7 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/markus-spiske-WUehAgqO5hE-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Explore the progress women have made in the world of cycling,
+                  from fighting for equal representation in races to achieving
+                  remarkable athletic feats. Profile prominent female cyclists
+                  who are inspiring the next generation.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">1 min</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/steven-lelham-atSaEOeE8Nk-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Explore the Olympics, the grandest stage for athletics, where
+                  athletes from around the world gather to compete at the
+                  highest level. Delve into iconic moments, records shattered,
+                  and stories of dedication that have marked Olympic history.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">2 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Sports/victor-freitas-qZ-U9z4TQ6A-unsplash.jpg"
+                alt="Sports Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Explore the Olympics, the grandest stage for athletics, where
+                  athletes from around the world gather to compete at the
+                  highest level. Delve into iconic moments, records shattered,
+                  and stories of dedication that have marked Olympic history.
+                  xplore the two-part clean and jerk lift, showcasing the raw
+                  strength needed to lift the bar and the finesse required to
+                  stabilize it overhead
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">25 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>
+        © 2022-2023 Lumina Logs, Inc. · <a href="#">Privacy</a> ·
+        <a href="#">Terms</a>
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
