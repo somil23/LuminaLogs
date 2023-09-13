@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VoxNebula</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">VoxNebula</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Blogs
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/technology.html"
+                    >Technology</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="/carrer.html">Carrer</a></li>
+                <li><a class="dropdown-item" href="/sports.html">Sports</a></li>
+                <li>
+                  <a class="dropdown-item" href="/education.html">Education</a>
+                </li>
+                <li><a class="dropdown-item" href="/health.html">Health</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/contact.html">Support</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">Write for us</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#signUpModal"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Login to VoxNebula
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Remember Me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      aria-labelledby="sigUpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signUpModalLabel">
+              Register with us
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cexampleInputPassword1"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  The fusion of cutting-edge research, data-driven insights, and
+                  interdisciplinary collaboration is driving the rapid evolution
+                  of these technologies.he key lies in responsible development
+                  and ethical implementation to ensure that these advancements
+                  benefit society as a whole
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">12 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  The landscape of upcoming technology is a tapestry woven with
+                  threads of innovation, each thread representing a breakthrough
+                  that promises to alter the course of our civilization.
+                  Augmented reality and virtual reality are poised to reshape
+                  how we interact with digital information and entertainment,
+                  blurring the lines between the physical and virtual worlds
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">5 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  The Internet of Things (IoT) is connecting devices, homes, and
+                  cities in a web of seamless communication, creating smarter,
+                  more efficient environments. Meanwhile, advances in
+                  nanotechnology are enabling us to manipulate matter at the
+                  atomic and molecular scale, opening doors to unprecedented
+                  materials, medical treatments, and manufacturing techniques.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">20 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/umberto-jXd2FSvcRr8-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Clean energy technologies, such as advanced solar panels,
+                  energy storage systems, and electric vehicles, are poised to
+                  reduce our carbon footprint and usher in a more sustainable
+                  future. Quantum computing holds the promise of solving complex
+                  problems that were once considered insurmountable,
+                  revolutionizing fields like cryptography, optimization, and
+                  drug discovery.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">45 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/cristian-guanipa-DhnnfJnjb7I-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  However, with great potential comes great responsibility.
+                  Ethical considerations, data privacy, and the potential for
+                  unintended consequences must be carefully navigated as these
+                  technologies advance.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">1 min</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  As we stand on the cusp of this technological frontier, the
+                  choices we make in how we develop, deploy, and regulate these
+                  innovations will determine the trajectory of our shared
+                  future. It's an exhilarating journey into uncharted territory,
+                  where creativity, curiosity, and caution must harmoniously
+                  guide us toward a future where the unimaginable becomes
+                  reality.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">8 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/cristiano-firmani-tmTidmpILWw-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  In the realm of healthcare, telemedicine and remote patient
+                  monitoring are poised to redefine the doctor-patient
+                  relationship, offering accessible and personalized care
+                  regardless of geographical barriers. 3D printing is
+                  revolutionizing manufacturing, enabling the creation of
+                  intricate designs and customized products, from aerospace
+                  components to prosthetics.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">5 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/imgix-klWUhr-wPJ8-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Renewable energy innovations, such as advanced wind turbines
+                  and ocean energy systems, are tapping into previously untapped
+                  sources of power, driving us closer to a world powered by
+                  clean and abundant resources. The convergence of biotechnology
+                  and computing is giving rise to bioinformatics, where vast
+                  amounts of genetic and molecular data are harnessed to decode
+                  complex biological processes
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">2 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                src="images/Technology/kvistholt-photography-oZPwn40zCK4-unsplash.jpg"
+                alt="Technology Image"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Meanwhile, self-learning algorithms and neural networks are
+                  pushing the boundaries of artificial intelligence, enabling
+                  machines to not only mimic human intelligence but also to
+                  adapt, learn, and evolve from their experiences. The space
+                  sector is experiencing a renaissance, with commercial ventures
+                  aiming to make space travel more accessible and sustainable.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">5 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>
+        © 2022-2023 Lumina Logs, Inc. · <a href="#">Privacy</a> ·
+        <a href="#">Terms</a>
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
